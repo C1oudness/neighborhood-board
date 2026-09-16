@@ -6,18 +6,106 @@
     <title>Дошка оголошень</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
-    <!---Шапка з навігацією та кнопкою "Додати оголошення"-->
+    <body>
+        <header>
+        <h1>Дошка оголошень</h1>
+        <nav>
+            <ul>
+                <li><a href="#all">Оголошення</a></li>
+                <li><a href="#realty">Нерухомість</a></li>
+                <li><a href="#electronics">Електроніка</a></li>
+                <li><a href="#add-ad">Додати оголошення</a></li>
+            </ul>
+        </nav>
+        </header>
 
-    <!--Блок фільтра за категорією-->
+        <main>
+            <section id="filter">
+                <h2>Фільтр за категорією</h2>
+                <form>
+                    <div class="filter">
+                        <label for="category">Категорія</label>
+                    </div>
+                        <select name="category" id="category">
+                        <option value="all">Усі категорії</option>
+                        <option value="realty">Нерухомість</option>
+                        <option value="electronics">Електроніка</option>
+                    </select>
+                    <button type="submit">Застосувати</button>
+                </form>
+                
+            </section>
 
-    <!--Список оголошень-->
+            <section id="all">
+                <h2>Оголошення</h2>
+                    <article id="realty">
+                        <h3>Продається 1-кімнатна квартира біля метро</h3>
+                        <p>Категорія: Нерухомість</p>
+                        <p>Місто: Київ, Шевченківський район</p>
+                        <p>Опис: Світла квартира площею 42 м², 5 поверх із 9. Поруч метро, супермаркет, школа та парк. Є меблі й побутова техніка.</p>
+                        <p>Ціна: 68 000 $</p>
+                        <p>Дата публікації: 16 вересня 2026 року</p>
+                    </article>
 
-    <!--Блок деталей обраного оголошення-->
+                    <article id="electronics">
+                        <h3>Продам ноутбук Lenovo ThinkPad E14</h3>
+                        <p>Категорія: Електроніка</p>
+                        <p>Місто: Львів</p>
+                        <p>Опис: Ноутбук у хорошому стані, екран 14 дюймів, процесор Intel Core i5, 16 ГБ оперативної пам’яті та SSD на 512 ГБ. У комплекті зарядний пристрій.</p>
+                        <p>Ціна: 19 500 грн</p>
+                        <p>Дата публікації: 15 вересня 2026 року</p>
+                    </article>
+            </section>
 
-    <!--Підвал-->
+            <section id="add-ad">
+                <h2>Додати оголошення</h2>
+                <form>
+                    <div class="form-field">
+                        <label for="add-title">Назва оголошення</label>
+                        <input type="text" name="title" id="add-title" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="add-category">Категорія</label>
+                        <select name="category" id="add-category" required>
+                            <option value="">Оберіть категорію</option>
+                            <option value="realty">Нерухомість</option>
+                            <option value="electronics">Електроніка</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="add-description">Опис</label>
+                        <textarea name="description" id="add-description" rows="5" required></textarea>
+                    </div>
 
+                    <div class="form-field">
+                        <label for="add-price">Ціна, грн</label>
+                        <input type="number" name="price" id="add-price" min="0" step="1" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="add-contact">Контактний номер</label>
+                        <input type="tel" name="contact" id="add-contact" placeholder="+380 XX XXX XX XX" required>
+                    </div>
+
+                     <button type="submit">Додати оголошення</button>
+                     
+                </form>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Деталі обраного оголошення</h2>
+            <p>Продається 1-кімнатна квартира біля метро</p>
+            <p>Контакт продавця: Олена, +380 67 123 45 67</p>
+            <p>Примітка: Телефонуйте щодня з 09:00 до 20:00 або пишіть у месенджер.</p>
+        </aside>
+
+        <footer>
+            <p>Автор: Назаренко Єгор ІП-52</p>
+            <p>Рік: 2026</p>
+        </footer>
 
     <script src="js/app.js"></script>
 </body>
