@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title description">
+  <title id="title">Світла кімната квартири</title>
+  <desc id="description">Ілюстрація кімнати з вікном, диваном і кімнатною рослиною</desc>
+  <rect width="1200" height="500" fill="#eadfc9"/>
+  <rect y="360" width="1200" height="140" fill="#b88655"/>
+  <path d="M0 390h1200M0 435h1200" stroke="#8a5f3b" stroke-width="5" opacity=".5"/>
+  <rect x="110" y="65" width="385" height="250" rx="8" fill="#f7f2e7" stroke="#765032" stroke-width="12"/>
+  <path d="M302 70v240M115 190h375" stroke="#765032" stroke-width="10"/>
+  <rect x="585" y="275" width="430" height="135" rx="26" fill="#d19a57" stroke="#6f4b2d" stroke-width="9"/>
+  <rect x="620" y="225" width="165" height="95" rx="22" fill="#f6ead4" stroke="#6f4b2d" stroke-width="8"/>
+  <rect x="815" y="225" width="165" height="95" rx="22" fill="#f6ead4" stroke="#6f4b2d" stroke-width="8"/>
+  <path d="M650 410v50M950 410v50" stroke="#6f4b2d" stroke-width="15"/>
+  <rect x="1040" y="285" width="70" height="125" rx="8" fill="#78543b"/>
+  <path d="M1075 288c-10-75-80-95-110-34 60 10 72 28 110 34zm0-5c4-83 79-105 111-43-61 13-74 32-111 43z" fill="#55704a"/>
+</svg>

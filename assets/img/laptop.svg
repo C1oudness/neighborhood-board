@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title description">
+  <title id="title">Ноутбук на столі</title>
+  <desc id="description">Ілюстрація відкритого ноутбука на дерев'яному столі</desc>
+  <rect width="1200" height="500" fill="#d9c5a4"/>
+  <rect y="350" width="1200" height="150" fill="#9a6b42"/>
+  <path d="M0 395h1200M0 448h1200" stroke="#745035" stroke-width="6" opacity=".55"/>
+  <rect x="335" y="55" width="530" height="315" rx="18" fill="#34302e" stroke="#181716" stroke-width="12"/>
+  <rect x="365" y="87" width="470" height="240" fill="#c5d8d8"/>
+  <circle cx="600" cy="72" r="7" fill="#777"/>
+  <path d="M295 365h610l105 80H190z" fill="#5b5652" stroke="#242220" stroke-width="10"/>
+  <path d="M430 385h340l35 29H395z" fill="#8a8580"/>
+  <rect x="530" y="421" width="140" height="13" rx="6" fill="#2d2b29"/>
+  <circle cx="975" cy="300" r="66" fill="#eee4d1" stroke="#6f4b2d" stroke-width="9"/>
+  <path d="M1000 300c42-15 70 12 52 45-15 29-49 30-67 8" fill="none" stroke="#6f4b2d" stroke-width="12"/>
+</svg>
