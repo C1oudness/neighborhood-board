@@ -17,29 +17,37 @@ body {
     line-height: 1.55;
 }
 
-header {
-    padding: 28px 20px;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 20px;
     border-bottom: 5px solid #d49a4a;
     background: #6f4b2d;
     color: #fffaf0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0 0 20px;
-    font-size: 2.4rem;
+.site-header h1 {
+    margin: 0;
+    font-size: 2rem;
     line-height: 1.2;
 }
 
 nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin: 6px 9px;
 }
 
 nav a {
@@ -50,7 +58,7 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus {
+nav a:focus-visible {
     text-decoration: underline;
 }
 
@@ -63,25 +71,25 @@ nav .add-ad-link {
 }
 
 nav .add-ad-link:hover,
-nav .add-ad-link:focus {
+nav .add-ad-link:focus-visible {
     background: #efbc6c;
     text-decoration: none;
 }
 
 main,
 aside {
-    width: calc(100% - 40px);
-    max-width: 960px;
+    width: calc(100% - 32px);
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
 }
 
 main {
-    padding: 34px 0 8px;
+    padding: 28px 0 8px;
 }
 
 section {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 }
 
 h2,
@@ -91,12 +99,13 @@ h3 {
 
 h2 {
     margin: 0 0 16px;
-    font-size: 1.65rem;
+    font-size: 1.55rem;
 }
 
 h3 {
     margin: 0 0 12px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.35;
 }
 
 p {
@@ -104,7 +113,7 @@ p {
 }
 
 form {
-    padding: 22px;
+    padding: 20px;
     border: 1px solid #b78b58;
     border-radius: 8px;
     background: #ead4ad;
@@ -156,31 +165,95 @@ button {
 }
 
 button:hover,
-button:focus {
+button:focus-visible {
     background: #51351f;
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+}
+
+/* Нечітку вимогу «дружня спільнота, а не барахолка» передано через спокійну палітру карток і рівномірні відступи. Компактні бейджі допомагають швидко відрізняти категорії, а назви й ціни зберігають чітку ієрархію. Тонка межа й м'яка тінь відокремлюють оголошення без надмірного декору. */
 .ad-card {
-    margin-bottom: 22px;
-    padding: 18px;
-    border: 1px solid #b78b58;
-    border-radius: 8px;
-    background: #fffaf0;
-    box-shadow: 0 5px 14px rgba(75, 49, 28, 0.12);
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #d3b995;
+    border-radius: 12px;
+    background: #fffdf8;
+    box-shadow: 0 6px 18px rgba(75, 49, 28, 0.09);
+}
+
+#listings-count {
+    margin: 0 0 18px;
+    color: #51351f;
+    font-weight: 700;
+}
+
+.ad-card.outdated {
+    border-color: #aa8066;
+    background: #f5eee4;
+}
+
+.ad-card.outdated img {
+    filter: saturate(0.7);
+}
+
+.ad-status {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    background: #e3c3a5;
+    color: #51351f;
+    font: 700 0.875rem/1.2 Arial, sans-serif;
 }
 
 .ad-card img {
     display: block;
     width: 100%;
-    height: 250px;
+    height: 210px;
     margin-bottom: 16px;
     border-radius: 6px;
     object-fit: cover;
 }
 
+.ad-category {
+    margin: 0 0 8px;
+}
+
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: #ffffff;
+    font: 700 0.875rem/1.2 Arial, sans-serif;
+}
+
+.category-badge--realty {
+    background: #245b4f;
+}
+
+.category-badge--electronics {
+    background: #225a8b;
+}
+
+.category-badge--other {
+    background: #6e365a;
+}
+
+.ad-date {
+    margin-top: 12px;
+    color: #5f5145;
+    font-size: 0.875rem;
+}
+
 aside {
-    margin-bottom: 34px;
-    padding: 22px;
+    margin-bottom: 32px;
+    padding: 20px;
     border: 2px solid #8a6541;
     border-left-width: 7px;
     border-radius: 8px;
@@ -204,17 +277,51 @@ footer p {
     margin: 4px 0;
 }
 
-@media (max-width: 620px) {
-    header h1 {
-        font-size: 2rem;
+@media (min-width: 600px) {
+    .site-header h1 {
+        font-size: 2.25rem;
     }
 
-    nav li {
-        display: block;
-        margin: 10px 0;
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
     }
 
-    .ad-card img {
-        height: 190px;
+   .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    main,
+    aside {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+   .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    main,
+    aside {
+        width: calc(100% - 64px);
+    }
+
+    main {
+        padding-top: 40px;
     }
 }
